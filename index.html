@@ -1,1 +1,31 @@
-<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">{"schemaVersion":1,"label":"is it monday","message":"no","color":"green","cacheSeconds":1800}</pre></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id='cool-text'>
+      <h1>{{product}}</h1>
+      <h2> I hate {{product}}, it is bad</h2>
+
+      <div 
+      class='cool-div' 
+      v-for='ele in list' 
+      :style='{backgroundColor: ele}'> {{ele}}</div>
+
+      <img v-on:click='coolMethod' v-bind:src='image'>
+      <button class='button' v-on:click='coolMethod'></button>
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+      const mountedApp = app.mount('#cool-text')
+    </script>
+
+  </body>
+</html>
