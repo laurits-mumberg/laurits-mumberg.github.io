@@ -21,19 +21,53 @@ hr {
     max-width: 30em;
 }
 
-.skills-box {
+
+/* Skillbox shit */
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.skills-boxes {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     grid-gap: 1.5em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
 }
 
 
-.experince-box {
+
+.experince-btn {
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
+    border-color: black;
+    background-color: transparent;
     display: flex;
+    align-items: center;
     padding-left: 2em;
+
+    cursor:pointer;
+
+    transition-duration: 0.4s;
+}
+
+.experince-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.experince-btn > img {
+    max-width: 2em;
+}
+
+.experince-btn:hover > img  {
+    filter: invert(100%);
 }
 
 .experience-title {

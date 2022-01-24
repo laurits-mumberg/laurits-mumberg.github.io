@@ -13,37 +13,28 @@
       <div class='resume'>
         <h1 class='name'>Laurits Mumberg</h1>
         <hr>
-        <p>Software student living in Aalborg. Studying software at AAU on the sixth semester. Interested in learning new technologies, languages and stacks. Want to get better at what i already know.</p>
+        <p>Software student living in Aalborg, currenly on the the sixth semester. Interested in learning new technologies, languages and stacks, and want to get better at what i already know.</p>
       </div>
       <h2>Skills</h2>
       <h3 class='experience-header'>Most experience</h3>
-      <div class='skills-box'>
 
-        <div class='experince-box'>
-          <img style='max-width: 2em;' src='assets/images/icons/csharp.svg'>
-          <h3 class='experience-title'>C#</h3>
-        </div>
+      <skill-box></skill-box>
 
-        <div class='experince-box'>
-          <img style='max-width: 2em;' src='assets/images/icons/nodedotjs.svg'>
-          <h3 class='experience-title'>Node.js</h3>
-        </div>
-
-        <div class='experince-box'>
-          <img style='max-width: 2em;' src='assets/images/icons/python.svg'>
-          <h3 class='experience-title'>Python</h3>
-        </div>
-
-        <div class='experince-box'>
-          <img style='max-width: 2em;' src='assets/images/icons/github.svg'>
-          <h3 class='experience-title'>Github</h3>
-        </div>
-
-        <div class='experince-box'>
-          <img style='max-width: 2em;' src='assets/images/icons/unity.svg'>
-          <h3 class='experience-title'>Unity</h3>
-        </div>
       </div>
+
     </main>
+
+    <!--Vue import and mounting-->
+    <!--Import app-->
+    <script src="./main.js"></script>
+
+    <!--Import components-->
+    <script src="./components/SkillBox.js"></script>
+
+    <!--Mount appp-->
+    <script>
+      const mountedApp = app.mount('.content')
+    </script>
+
   </body>
 </html>
