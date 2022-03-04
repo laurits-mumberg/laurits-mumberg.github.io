@@ -1,4 +1,8 @@
 app.component('skill-box', {
+    created() {
+        console.log(this.skillsArr) 
+      },
+
     data: function () {
         return {
           showingSkills: true,
@@ -31,10 +35,12 @@ app.component('skill-box', {
         }
     },
 
+    props: ['skillsArr'],
+
     methods: {
         selectSkill: function(index) {
             this.showingSkills = false;
-            this.selectedSkill = this.skills[index];
+            this.selectedSkill = this.skillsArr[index];
         },
         deselectSkill: function() {
             this.showingSkills = true;
@@ -45,11 +51,10 @@ app.component('skill-box', {
 
     template:
     /*html*/
-    `<div class="skills-container">
-
+    `
         <div v-if="showingSkills" class='skills-boxes'>
 
-            <button v-for='skill, idx in skills' :key="skill.name" v-on:click='selectSkill(idx)' type="button" class='experince-btn'>
+            <button v-for='skill, idx in this.skillsArr' :key="skill.name" v-on:click='selectSkill(idx)' type="button" class='experince-btn'>
                 <img :src='skill.image'>
                 <h3 class='experience-title'>{{skill.name}}</h3>
             </button>
@@ -59,6 +64,5 @@ app.component('skill-box', {
         <button>
         <h3>back</h3>
         </button>
-        </div>
-  </div>`
+        </div>`
 })
