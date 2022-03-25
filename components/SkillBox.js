@@ -7,31 +7,6 @@ app.component('skill-box', {
         return {
           showingSkills: true,
           selectedSkill: null,
-          skills: [{
-              name: 'C#',
-              image: './assets/images/icons/csharp.svg',
-              information: 'info'
-          },
-          {
-            name: 'Node.js',
-            image: './assets/images/icons/nodedotjs.svg',
-            information: 'info'
-        },
-        {
-            name: 'Python',
-            image: './assets/images/icons/python.svg',
-            information: 'info'
-        },
-        {
-            name: 'Github',
-            image: './assets/images/icons/github.svg',
-            information: 'info'
-        },
-        {
-            name: 'Unity',
-            image: './assets/images/icons/unity.svg',
-            information: 'info'
-        }]
         }
     },
 
@@ -39,6 +14,7 @@ app.component('skill-box', {
 
     methods: {
         selectSkill: function(index) {
+            this.$emit('skillSelected', this.skillsArr[index])
             this.showingSkills = false;
             this.selectedSkill = this.skillsArr[index];
         },
